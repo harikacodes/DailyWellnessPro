@@ -1,0 +1,89 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DailyWellnessPro.MainPage"
+             Title="Daily Wellness"
+             BackgroundColor="#F9FAFB">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <!-- Title -->
+            <Label Text="Select Your Gender"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1E293B"/>
+
+            <!-- Gender Selection -->
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
+
+                <!-- Male -->
+                <Frame x:Name="MaleFrame"
+                       BorderColor="Transparent"
+                       BackgroundColor="White"
+                       CornerRadius="20"
+                       Padding="10"
+                       HasShadow="True">
+                    <Image x:Name="MaleImage"
+                           Source="male.png"
+                           HeightRequest="120"
+                           WidthRequest="120">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnMaleSelected"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+
+                <!-- Female -->
+                <Frame x:Name="FemaleFrame"
+                       BorderColor="Transparent"
+                       BackgroundColor="White"
+                       CornerRadius="20"
+                       Padding="10"
+                       HasShadow="True">
+                    <Image x:Name="FemaleImage"
+                           Source="female.png"
+                           HeightRequest="120"
+                           WidthRequest="120">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFemaleSelected"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </HorizontalStackLayout>
+
+            <!-- Sleep Slider -->
+            <Label Text="Sleep Hours (last night)"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#374151"/>
+            <Slider x:Name="SleepSlider" Minimum="0" Maximum="12" Value="7" />
+            <Label x:Name="SleepLabel" Text="7 h" FontSize="16" TextColor="#2563EB"/>
+
+            <!-- Stress Slider -->
+            <Label Text="Stress Level"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#374151"/>
+            <Slider x:Name="StressSlider" Minimum="0" Maximum="10" Value="4" />
+            <Label x:Name="StressLabel" Text="4" FontSize="16" TextColor="#DC2626"/>
+
+            <!-- Activity Slider -->
+            <Label Text="Activity Minutes (today)"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#374151"/>
+            <Slider x:Name="ActivitySlider" Minimum="0" Maximum="120" Value="30" />
+            <Label x:Name="ActivityLabel" Text="30 min" FontSize="16" TextColor="#059669"/>
+
+            <!-- Next Button -->
+            <Button Text="Next"
+                    x:Name="NextBtn"
+                    FontSize="18"
+                    BackgroundColor="#9333EA"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="55"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

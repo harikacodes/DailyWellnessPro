@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DailyWellnessPro.ResultPage"
+             Title="Wellness Result"
+             BackgroundColor="#F3F4F6">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <!-- Wellness Score -->
+            <Frame CornerRadius="20" HasShadow="True" Padding="20"
+                   BackgroundColor="#4F46E5">
+                <Label x:Name="ScoreLabel"
+                       Text="Score: 0"
+                       FontSize="40"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <!-- Status -->
+            <Frame CornerRadius="20" HasShadow="True" Padding="20"
+                   BackgroundColor="#EC4899">
+                <Label x:Name="StatusLabel"
+                       Text="Status: -"
+                       FontSize="28"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <!-- Buttons -->
+            <Button Text="See Recommendations"
+                    x:Name="RecommendationsBtn"
+                    FontSize="18"
+                    BackgroundColor="#22C55E"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="55"/>
+
+            <Button Text="Back to Inputs"
+                    x:Name="BackBtn"
+                    FontSize="18"
+                    BackgroundColor="#F59E0B"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="55"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

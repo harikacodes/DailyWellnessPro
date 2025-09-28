@@ -1,0 +1,46 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DailyWellnessPro.RecommendationPage"
+             Title="Recommendations"
+             BackgroundColor="#F0F9FF">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <!-- Recommendations Title -->
+            <Frame CornerRadius="20" HasShadow="True" BackgroundColor="#0EA5E9" Padding="15">
+                <Label Text="Personalized Recommendations"
+                       FontSize="28"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <!-- Recommendations Text -->
+            <Frame CornerRadius="20" HasShadow="True" BackgroundColor="#A855F7" Padding="20">
+                <Label x:Name="RecommendationLabel"
+                       FontSize="20"
+                       TextColor="White"
+                       LineBreakMode="WordWrap"/>
+            </Frame>
+
+            <!-- Buttons -->
+            <Button Text="Back to Results"
+                    x:Name="BackToResultsBtn"
+                    FontSize="18"
+                    BackgroundColor="#22C55E"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="55"/>
+
+            <Button Text="Back to Inputs"
+                    x:Name="BackToInputsBtn"
+                    FontSize="18"
+                    BackgroundColor="#F43F5E"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="55"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
